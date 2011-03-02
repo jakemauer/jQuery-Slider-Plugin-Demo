@@ -1,6 +1,6 @@
-/* SVN Version 26
- *Photostack script by idfive - 2010
- *http://www.idfive.com
+/*  @title: jQuery Slider Plugin
+	@author: Jake Mauer
+	@year: 2010
 */
  
 
