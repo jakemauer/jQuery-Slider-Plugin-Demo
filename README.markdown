@@ -1,6 +1,7 @@
 # jQuery Slider Plugin
 
 This plugin was written for and during the graduate GD web publishing course at MICA during the fall 2010 semester.
+Demo here: [http://jakemauer.com/lessons/jquery/jquery-slider/](http://jakemauer.com/lessons/jquery/jquery-slider/)
 
 ## Purpose
 
