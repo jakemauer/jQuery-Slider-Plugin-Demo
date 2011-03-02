@@ -1,0 +1,148 @@
+<!doctype html>
+ 
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
+  <script src="js/jquery-slider.js"></script>
+
+  <title>jQuery Image Slider</title>
+
+  <style>
+  html, body, div, span, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  abbr, address, cite, code,
+  del, dfn, em, img, ins, kbd, q, samp,
+  small, strong, sub, sup, var,
+  b, i,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section, summary,
+  time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+  }
+  
+  :focus {
+    outline:none;
+    }
+  /* ------------END CSS RESET-----------   */
+
+
+
+  /* ------------BEGIN MAIN CSS-----------   */
+
+  body {
+   background-color:#999; 
+  }
+
+  .gallery {
+    margin:0 auto;
+    position:relative;
+    width:640px;
+  }
+  
+  .gallery-shade {
+    overflow:auto;
+    width:640px;
+  }
+  
+  .gallery ul {
+    list-style-type: none;
+  }
+
+  .gallery-slider {
+    width: 10000px;
+    height: 432px;
+  }
+
+  .gallery li {
+    float:left;
+
+  }
+
+  .gallery-controls a {
+    height:75px;
+    width:32px;
+    display:block;
+    background: url(images/arrows.png) no-repeat;
+    text-indent:-9999px;
+    position:absolute;
+    top:200px;
+  }
+
+  a.gallery-next {
+    background-position: -32px 0px;
+    right:-45px;
+  }
+  a.gallery-previous {
+    left:-45px;
+  }
+
+  .gallery-captions {
+    color:#FFFFFF;
+    font-family:georgia;
+    font-size:1.75em;
+  }
+  </style>
+
+	<script>
+		$(document).ready(function(){
+        $('div.gallery').slider({
+        'speed':500,
+        'imageWidth':1024
+      });
+		});
+	</script>
+</head>
+
+<body>
+<div class="gallery">
+  <div class="gallery-shade"><ul class="gallery-slider">
+    <li>
+      <img src="http://farm4.static.flickr.com/3260/2618348441_477c74116e_b.jpg" width="640" height="432"  />
+      <span class="caption"><p>Fuji Forest - Japan</p></span>
+    </li>
+    <li>
+      <img src="http://farm4.static.flickr.com/3087/2618346143_830aecdd46_b.jpg" width="640" height="432"  />
+      <span class="caption"><p>Fuji Forest #2 - Japan</p></span>
+    </li>
+    <li>
+      <img src="http://farm4.static.flickr.com/3028/2618344293_bc60f0003b_b.jpg" width="640" height="432"  />
+      <span class="caption"><p>Inoshida Beach - Japan</p></span>
+    </li>
+    <li>
+      <img src="http://farm4.static.flickr.com/3119/2616846697_064f2fc066_b.jpg" width="640" height="432"  />
+      <span class="caption"><p>Inoshida Beach #2- Japan</p></span>
+    </li>
+    <li>
+      <img src="http://farm4.static.flickr.com/3032/2616845293_75e7e75813_b.jpg" width="640" height="432"  />
+      <span class="caption"><p>Inoshida Beach #3- Japan</p></span>
+    </li>
+    <li>
+      <img src="http://farm4.static.flickr.com/3257/2617667132_483bcf7819_b.jpg" width="640" height="432"  />
+      <span class="caption"><p>A cat on a motorcycle. Ho Hum. <a href="http://www.flickr.com/photos/wowsprinkles/2617667132/in/set-72157605852943880/">Here's a link to the Flickr page.</p></a></span>
+    </li>
+  </ul>
+  <ul class="gallery-controls">
+    <li><a class="gallery-previous"  href="#">Previous</a></li>
+    <li><a class="gallery-next" href="#">Next</a></li>
+  </ul>
+  <div class="gallery-captions"></div></div>
+</div>
+
+</body>
+</html>
